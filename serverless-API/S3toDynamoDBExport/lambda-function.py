@@ -20,6 +20,7 @@ def lambda_handler(event, context):
         user_data = user.split(',')
         item_id = str(uuid.uuid4())
         table.put_item(Item = {
+            
             "id" : item_id,
             "name" : user_data[1],
             "salary" : user_data[2]
